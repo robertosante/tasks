@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: 
+  website: 
+  status: 
+  expiration_date: 
+  header: 
+  user: one
+
+two:
+  description: 
+  website: 
+  status: 
+  expiration_date: 
+  header: 
+  user: two
