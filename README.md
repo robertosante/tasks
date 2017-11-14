@@ -19,7 +19,12 @@ curl --data "email=myemail@email.com&password=mypassword" http://localhost:3000/
 ```
 
 You can create posts using postman or curl: (expiration_date is optional)
+Postman: dont forget to add Authorization in the header and the Bearer and the token example:
+
 ```
+Authorization: Bearer   eyasdasdasdNiJ9.eyasdasdadaY5OTV9.hizasdasdsUG-oPkGINiXGIoassdadadsaasdadasdohXOyjrOQTd9nI
+Content-Type: application/json
+
 {
   "task": {
     "description": "foo",
