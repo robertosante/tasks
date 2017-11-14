@@ -1,24 +1,40 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Synopsis
 
-Things you may want to cover:
+Simple Tasks Api, the Api uses JWT to authenticate. You must have a valid user to be able to authenticate. Then you can edit, delete and create tasks, the Api will give a full list of your current taks.
 
-* Ruby version
+## Code Example
 
-* System dependencies
+You can create users in the console: 
 
-* Configuration
+```
+User.create!(email: "myemail@email.com", password: "mypassword", password_confirmation: "mypassword")
+```
 
-* Database creation
+To make a request to get your token: 
 
-* Database initialization
+```
+curl --data "email=myemail@email.com&password=mypassword" http://localhost:3000/authorize
+```
 
-* How to run the test suite
+You can create posts using postman or curl: (expiration_date is optional)
+```
+{
+  'task': {
+    'description': 'test',
+    'website': 'http://test.com',
+    'status': '1',
+   }
+}
 
-* Services (job queues, cache servers, search engines, etc.)
+## Installation
 
-* Deployment instructions
+```
+git clone git@github.com:robertosante/tasks.git
+bundle && rake db:create
+```
+## API Reference
 
-* ...
+Only tasks are available just visit /tasks and you will see your current tasks, you can create tasks sending a post request to the /tasks path once you are authorized.
+
