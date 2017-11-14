@@ -7,6 +7,14 @@ class Task < ApplicationRecord
 
   validates_presence_of :description, :website, :status
 
+  def self.filter(filter)
+    if filter
+      where("website LIKE ? OR description LIKE ? ", filter, filter)
+    else
+      all
+    end
+  end
+
   private
 
     def set_header

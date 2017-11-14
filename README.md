@@ -18,7 +18,7 @@ To make a request to get your token:
 curl --data "email=myemail@email.com&password=mypassword" http://localhost:3000/authorize
 ```
 
-You can create posts using postman or curl:
+You can create posts using postman or curl: (expiration_date is optional)
 ```
 {
   'task': {
