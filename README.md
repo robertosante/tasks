@@ -21,12 +21,13 @@ curl --data "email=myemail@email.com&password=mypassword" http://localhost:3000/
 You can create posts using postman or curl: (expiration_date is optional)
 ```
 {
-  'task': {
-    'description': 'test',
-    'website': 'http://test.com',
-    'status': '1',
+  "task": {
+    "description": "foo",
+    "website": "http://www.simplify.ba",
+    "status": 0
    }
 }
+```
 
 ## Installation
 
